@@ -1,4 +1,4 @@
-### nwipe for UNRAID
+### nwipe (Secure Disk Eraser) for UNRAID
 
 Installable via Community Applications or Direct URL on UNRAID 6.10+:
 

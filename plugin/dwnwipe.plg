@@ -14,7 +14,7 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10" icon="bomb">
 
 <CHANGES>
-## nwipe Secure Disk Eraser for UNRAID
+## nwipe (Secure Disk Eraser) for UNRAID
 ###2024.06.21
 - release note: welcome to the first version of the package.
 </CHANGES>
@@ -50,9 +50,9 @@ exit 0
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
 <INLINE>
-**nwipe Secure Disk Eraser for UNRAID**
+**nwipe (Secure Disk Eraser) for UNRAID**
 
-nwipe Secure Disk Eraser / Terminal Command (to start the GUI): **nwipe** / User Manual: **nwipe -h**
+Terminal Command (to start the GUI): **nwipe** / User Manual: **nwipe -h**
 </INLINE>
 </FILE>
 
@@ -60,7 +60,7 @@ nwipe Secure Disk Eraser / Terminal Command (to start the GUI): **nwipe** / User
 <INLINE> 
 echo ""
 echo "-------------------------------------------------------------"
-echo " nwipe Secure Disk Eraser for UNRAID has been installed."
+echo " nwipe (Secure Disk Eraser) for UNRAID has been installed."
 echo " Version: &version; / Plugin Maintainer: &author;"
 echo "-------------------------------------------------------------"
 echo ""
@@ -76,7 +76,7 @@ rm -rf &plgPATH;
 rm -rf &emhttp;
 echo ""
 echo "-----------------------------------------------------------"
-echo " nwipe Secure Disk Eraser for UNRAID has been removed."
+echo " nwipe (Secure Disk Eraser) for UNRAID has been removed."
 echo " Version: &version; / Plugin Maintainer: &author;"
 echo "-----------------------------------------------------------"
 echo ""
