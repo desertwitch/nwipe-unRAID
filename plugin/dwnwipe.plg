@@ -45,7 +45,7 @@ exit 0
 <!-- plugin package -->
 <FILE Name="&plgPATH;/nwipe-0.37-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
 <URL>&pkgURL;/nwipe-0.37-x86_64-1.txz</URL>
-<MD5>7a2c5c830414169111fe9638b561f2fd</MD5>
+<MD5>1d60f012f800defeac1e8e57f4bbfc9a</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
