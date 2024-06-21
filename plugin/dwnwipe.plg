@@ -64,7 +64,7 @@ echo " nwipe (Secure Disk Eraser) for UNRAID has been installed."
 echo " Version: &version; / Plugin Maintainer: &author;"
 echo "-------------------------------------------------------------"
 echo ""
-echo "!!! USAGE: To start the GUI, type &apos;nwipe&apos; in a terminal session. !!!"
+echo "!!! To start the GUI, type &apos;nwipe&apos; in a terminal session. !!!"
 echo ""
 </INLINE>
 </FILE>
