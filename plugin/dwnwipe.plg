@@ -11,7 +11,7 @@
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10" icon="eraser">
+<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10" icon="bomb">
 
 <CHANGES>
 ## nwipe Secure Disk Eraser for UNRAID
@@ -45,7 +45,7 @@ exit 0
 <!-- plugin package -->
 <FILE Name="&plgPATH;/nwipe-0.37-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
 <URL>&pkgURL;/nwipe-0.37-x86_64-1.txz</URL>
-<MD5>1d60f012f800defeac1e8e57f4bbfc9a</MD5>
+<MD5>47e1219fb31c8268fbfeca6922ee9c14</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
