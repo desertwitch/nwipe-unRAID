@@ -11,7 +11,7 @@
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10" icon="bomb">
+<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="https://forums.unraid.net/topic/168624-plugin-nwipe-secure-disk-eraser-for-unraid/" min="6.10" icon="bomb">
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) for UNRAID
