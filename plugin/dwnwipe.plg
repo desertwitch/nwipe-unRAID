@@ -72,10 +72,25 @@ echo ""
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
 killall nwipe-bin
+
+# check if parted is used by another plugin
+if [ "$(find /boot/config/plugins/*.plg -type f ! -iname "*dwnwipe.plg*" | xargs grep "parted-" -sl)" ]; then
+    echo "parted in use by another plugin, will not be removed with nwipe."
+    rm -f &plgPATH;/parted*.txz
+fi
+
+# check if libconfig is used by another plugin
+if [ "$(find /boot/config/plugins/*.plg -type f ! -iname "*dwnwipe.plg*" | xargs grep "libconfig-" -sl)" ]; then
+    echo "libconfig in use by another plugin, will not be removed with nwipe."
+    rm -f &plgPATH;/libconfig*.tgz
+fi
+
 removepkg &plgPATH;/*.txz
 removepkg &plgPATH;/*.tgz
+
 rm -rf &plgPATH;
 rm -rf &emhttp;
+
 echo ""
 echo "-----------------------------------------------------------"
 echo " nwipe (Secure Disk Eraser) for UNRAID has been removed."
