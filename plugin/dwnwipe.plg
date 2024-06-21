@@ -1,0 +1,86 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "dwnwipe">
+<!ENTITY author    "desertwitch">
+<!ENTITY version   "2024.06.21">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
+<!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
+<!ENTITY pkgURL    "&gitURL;/packages">
+<!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+]>
+
+<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10" icon="eraser">
+
+<CHANGES>
+## nwipe for UNRAID
+###2024.06.21
+- release note: welcome to the first version of the package.
+</CHANGES>
+
+<FILE Run="/bin/bash">
+<INLINE> 
+killall nwipe-bin
+exit 0
+</INLINE>
+</FILE>
+
+<!-- dependency packages -->
+<FILE Name="&plgPATH;/parted-3.6-x86_64-1_slack15.1.txz" Min="6.13" Run="upgradepkg --install-new">
+<URL>&pkgURL;/parted-3.6-x86_64-1_slack15.1.txz</URL>
+<MD5>a0d226c87c2bbfda2100030f30bd38ef</MD5>
+</FILE>
+
+<FILE Name="&plgPATH;/parted-3.4-x86_64-2_slack15.0.txz" Min="6.10" Max="6.12.99" Run="upgradepkg --install-new">
+<URL>&pkgURL;/parted-3.4-x86_64-2_slack15.0.txz</URL>
+<MD5>6df9026349b56b4e4beea086bc2afeb0</MD5>
+</FILE>
+
+<FILE Name="&plgPATH;/libconfig-1.7.2-x86_64-1alien.tgz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/libconfig-1.7.2-x86_64-1alien.tgz</URL>
+<MD5>5a782e7e41566ccf4507417a6384ef1f</MD5>
+</FILE>
+
+<!-- plugin package -->
+<FILE Name="&plgPATH;/nwipe-0.37-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.37-x86_64-1.txz</URL>
+<MD5>7a2c5c830414169111fe9638b561f2fd</MD5>
+</FILE>
+
+<FILE Name="&emhttp;/README.md" Mode="0644">
+<INLINE>
+**nwipe for UNRAID**
+
+nwipe Secure Disk Eraser / Terminal Command (with GUI): **nwipe** / User Manual: **nwipe -h**
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash">
+<INLINE> 
+echo ""
+echo "-------------------------------------------------------------"
+echo " nwipe for UNRAID has been installed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-------------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+killall nwipe-bin
+removepkg &plgPATH;/*.txz
+removepkg &plgPATH;/*.tgz
+rm -rf &plgPATH;
+rm -rf &emhttp;
+echo ""
+echo "-----------------------------------------------------------"
+echo " nwipe for UNRAID has been removed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+</PLUGIN>
