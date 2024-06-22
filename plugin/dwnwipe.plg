@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "dwnwipe">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2024.06.21">
+<!ENTITY version   "2024.06.22">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
@@ -15,6 +15,8 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) for UNRAID
+###2024.06.22
+- new: added a warning for users not to wipe disks which are still part of arrays or pools
 ###2024.06.21
 - release note: welcome to the first version of the package.
 </CHANGES>
@@ -45,7 +47,7 @@ exit 0
 <!-- plugin package -->
 <FILE Name="&plgPATH;/nwipe-0.37-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
 <URL>&pkgURL;/nwipe-0.37-x86_64-1.txz</URL>
-<MD5>47e1219fb31c8268fbfeca6922ee9c14</MD5>
+<MD5>a387efb7e10a1438f43b10dff7326ef3</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
