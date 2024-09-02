@@ -23,7 +23,7 @@
 
 <FILE Run="/bin/bash">
 <INLINE> 
-killall nwipe-bin
+killall nwipe-bin >/dev/null 2>&amp;1
 exit 0
 </INLINE>
 </FILE>
@@ -73,7 +73,7 @@ echo ""
 
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-killall nwipe-bin
+killall nwipe-bin >/dev/null 2>&amp;1
 
 # check if parted is used by another plugin
 if [ "$(find /boot/config/plugins/*.plg -type f ! -iname "*dwnwipe.plg*" | xargs grep "parted-" -sl)" ]; then
