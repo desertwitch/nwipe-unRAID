@@ -15,14 +15,14 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) for UNRAID
-###2024.06.22
-- new: added a warning for users not to wipe disks which are still part of arrays or pools
+###2025.01.12
+- new: updated from nwipe-0.37 to nwipe-0.38
 ###2024.06.21
 - release note: welcome to the first version of the package.
 </CHANGES>
 
 <FILE Run="/bin/bash">
-<INLINE> 
+<INLINE>
 killall nwipe-bin >/dev/null 2>&amp;1
 exit 0
 </INLINE>
@@ -45,9 +45,9 @@ exit 0
 </FILE>
 
 <!-- plugin package -->
-<FILE Name="&plgPATH;/nwipe-0.37-x86_64-2.txz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/nwipe-0.37-x86_64-2.txz</URL>
-<MD5>a387efb7e10a1438f43b10dff7326ef3</MD5>
+<FILE Name="&plgPATH;/nwipe-0.38-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.38-x86_64-1.txz</URL>
+<MD5>d1df84e8a2f75079b3b9e6afb5038412</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
@@ -59,14 +59,18 @@ Terminal Command (to start the GUI): **nwipe** / User Manual: **nwipe -h**
 </FILE>
 
 <FILE Run="/bin/bash">
-<INLINE> 
+<INLINE>
 echo ""
 echo "-------------------------------------------------------------"
 echo " nwipe (Secure Disk Eraser) for UNRAID has been installed."
 echo " Version: &version; / Plugin Maintainer: &author;"
 echo "-------------------------------------------------------------"
 echo ""
-echo "!!! To start the GUI, type &apos;nwipe&apos; in a terminal session. !!!"
+echo "*************************************************************"
+echo "!! To start the GUI, type 'nwipe' into any terminal session."
+echo "!! Best use TMUX or SCREEN to ENSURE the SESSION STAYS OPEN."
+echo "!! Maintainer recommends Tmux Terminal Manager (TTM) plugin."
+echo "*************************************************************"
 echo ""
 </INLINE>
 </FILE>
