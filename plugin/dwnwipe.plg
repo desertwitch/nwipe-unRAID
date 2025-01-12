@@ -61,16 +61,16 @@ Terminal Command (to start the GUI): **nwipe** / User Manual: **nwipe -h**
 <FILE Run="/bin/bash">
 <INLINE>
 echo ""
-echo "-------------------------------------------------------------"
-echo " nwipe (Secure Disk Eraser) for UNRAID has been installed."
-echo " Version: &version; / Plugin Maintainer: &author;"
-echo "-------------------------------------------------------------"
-echo ""
 echo "*************************************************************"
 echo "!! To start the GUI, type 'nwipe' into any terminal session."
 echo "!! Best use TMUX or SCREEN to ENSURE the SESSION STAYS OPEN."
 echo "!! Maintainer recommends Tmux Terminal Manager (TTM) plugin."
 echo "*************************************************************"
+echo ""
+echo "-------------------------------------------------------------"
+echo " nwipe (Secure Disk Eraser) for UNRAID has been installed."
+echo " Version: &version; / Plugin Maintainer: &author;"
+echo "-------------------------------------------------------------"
 echo ""
 </INLINE>
 </FILE>
