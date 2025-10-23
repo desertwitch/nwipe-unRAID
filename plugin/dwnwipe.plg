@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "dwnwipe">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2025.01.12">
+<!ENTITY version   "2025.10.23">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
@@ -15,6 +15,8 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) for UNRAID
+###2025.10.23
+- new: updated from nwipe-0.38 to nwipe-0.39
 ###2025.01.12
 - new: updated from nwipe-0.37 to nwipe-0.38
 ###2024.06.21
@@ -45,9 +47,9 @@ exit 0
 </FILE>
 
 <!-- plugin package -->
-<FILE Name="&plgPATH;/nwipe-0.38-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/nwipe-0.38-x86_64-1.txz</URL>
-<MD5>d1df84e8a2f75079b3b9e6afb5038412</MD5>
+<FILE Name="&plgPATH;/nwipe-0.39-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.39-x86_64-1.txz</URL>
+<MD5>4550d9f493f2d8f395c0ef6c057e032b</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
