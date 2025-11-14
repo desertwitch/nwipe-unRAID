@@ -15,6 +15,13 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) for UNRAID
+###2025.11.14
+- new: added a custom "Unraid Preclear" method to nwipe-0.39
+- release note: you can now preclear unraid disks within nwipe
+- release note: while this was extensively tested, please do report
+- release note: success or issues in the forum support topic - thanks!
+- release note: source code at: https://github.com/desertwitch/nwipe-pc
+- release note: you can even build this to preclear on non-Unraid systems
 ###2025.10.23
 - new: updated from nwipe-0.38 to nwipe-0.39
 ###2025.01.12
@@ -47,14 +54,14 @@ exit 0
 </FILE>
 
 <!-- plugin package -->
-<FILE Name="&plgPATH;/nwipe-0.39-x86_64-1.txz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/nwipe-0.39-x86_64-1.txz</URL>
-<MD5>4550d9f493f2d8f395c0ef6c057e032b</MD5>
+<FILE Name="&plgPATH;/nwipe-0.39-x86_64-2_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.39-x86_64-2_unraid.txz</URL>
+<MD5>f2d9b2f3e8df52424e2582c4b55c59bf</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
 <INLINE>
-**nwipe (Secure Disk Eraser) for UNRAID**
+**nwipe (Secure Disk Eraser) with Preclear**
 
 Terminal Command (to start the GUI): **nwipe** / User Manual: **nwipe -h**
 </INLINE>
@@ -70,7 +77,7 @@ echo "!! Maintainer recommends Tmux Terminal Manager (TTM) plugin."
 echo "*************************************************************"
 echo ""
 echo "-------------------------------------------------------------"
-echo " nwipe (Secure Disk Eraser) for UNRAID has been installed."
+echo " nwipe (with Preclear) has been installed."
 echo " Version: &version; / Plugin Maintainer: &author;"
 echo "-------------------------------------------------------------"
 echo ""
@@ -101,7 +108,7 @@ rm -rf &emhttp;
 
 echo ""
 echo "-----------------------------------------------------------"
-echo " nwipe (Secure Disk Eraser) for UNRAID has been removed."
+echo " nwipe (with Preclear) has been removed."
 echo " Version: &version; / Plugin Maintainer: &author;"
 echo "-----------------------------------------------------------"
 echo ""
