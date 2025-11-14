@@ -14,14 +14,19 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="https://forums.unraid.net/topic/168624-plugin-nwipe-secure-disk-eraser-for-unraid/" min="6.10" icon="bomb">
 
 <CHANGES>
-## nwipe (Secure Disk Eraser) for UNRAID
+## nwipe (Secure Disk Eraser) with Preclear
 ###2025.11.14
 - new: added a custom "Unraid Preclear" method to nwipe-0.39
-- release note: you can now preclear unraid disks within nwipe
+- release note:
+- release note: it is now possible to preclear disks within nwipe!
+- release note:
 - release note: while this was extensively tested, please do report
-- release note: success or issues in the forum support topic - thanks!
-- release note: source code at: https://github.com/desertwitch/nwipe-pc
-- release note: you can even build this to preclear on non-Unraid systems
+- release note: success or fails in the forum support topic, thanks!
+- release note: source code: https://github.com/desertwitch/nwipe-pc
+- release note:
+- release note: you can also use the Docker container to preclear disks on non-Unraid systems
+- release note: docker container: https://github.com/desertwitch/nwipe-pc/pkgs/container/nwipe-pc
+- release note:
 ###2025.10.23
 - new: updated from nwipe-0.38 to nwipe-0.39
 ###2025.01.12
@@ -56,7 +61,7 @@ exit 0
 <!-- plugin package -->
 <FILE Name="&plgPATH;/nwipe-0.39-x86_64-2_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
 <URL>&pkgURL;/nwipe-0.39-x86_64-2_unraid.txz</URL>
-<MD5>f2d9b2f3e8df52424e2582c4b55c59bf</MD5>
+<MD5>d67965299fe3308006a48f54f074ecc6</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
