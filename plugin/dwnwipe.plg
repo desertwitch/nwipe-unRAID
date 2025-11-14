@@ -57,7 +57,7 @@ exit 0
 <!-- plugin package -->
 <FILE Name="&plgPATH;/nwipe-0.39-x86_64-2_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
 <URL>&pkgURL;/nwipe-0.39-x86_64-2_unraid.txz</URL>
-<MD5>d67965299fe3308006a48f54f074ecc6</MD5>
+<MD5>be12006432e8341b287242e5480477e1</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
