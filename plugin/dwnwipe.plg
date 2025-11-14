@@ -17,16 +17,12 @@
 ## nwipe (Secure Disk Eraser) with Preclear
 ###2025.11.14
 - new: added a custom "Unraid Preclear" method to nwipe-0.39
-- release note:
 - release note: it is now possible to preclear disks within nwipe!
-- release note:
 - release note: while this was extensively tested, please do report
 - release note: success or fails in the forum support topic, thanks!
 - release note: source code: https://github.com/desertwitch/nwipe-pc
-- release note:
 - release note: you can also use the Docker container to preclear disks on non-Unraid systems
 - release note: docker container: https://github.com/desertwitch/nwipe-pc/pkgs/container/nwipe-pc
-- release note:
 ###2025.10.23
 - new: updated from nwipe-0.38 to nwipe-0.39
 ###2025.01.12
