@@ -6,7 +6,7 @@ Installable via Community Applications or Direct URL on UNRAID 6.10+:
 
 https://raw.githubusercontent.com/desertwitch/nwipe-unRAID/main/plugin/dwnwipe.plg
 
-For the general-purpose forked `nwipe-pc` (which includes preclear) check out:
+For the general-purpose, forked `nwipe-pc` (which includes preclear) check out:
 
 https://github.com/desertwitch/nwipe-pc
 
