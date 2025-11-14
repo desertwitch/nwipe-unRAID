@@ -1,4 +1,4 @@
-### nwipe (Secure Disk Eraser) with Preclear for UNRAID
+### nwipe (Secure Disk Eraser) with Preclear (for UNRAID)
 
 ![GitHub Tag](https://img.shields.io/github/v/tag/desertwitch/nwipe-unRAID?label=release&color=peru)
 
