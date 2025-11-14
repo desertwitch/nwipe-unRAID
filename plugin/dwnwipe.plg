@@ -16,7 +16,7 @@
 <CHANGES>
 ## nwipe (Secure Disk Eraser) with Preclear
 ###2025.11.14
-- new: added a custom "Unraid Preclear" method to nwipe-0.39
+- new: added a custom "Unraid Preclear" method to nwipe-0.39 (now forked)
 - release note: while this was extensively tested, please do report
 - release note: successes or fails in the forum support topic, thanks!
 - release note: use the Docker container to preclear disks on non-Unraid systems
