@@ -18,7 +18,7 @@
 ###2025.11.14
 - new: added a custom "Unraid Preclear" method to nwipe-0.39
 - release note: while this was extensively tested, please do report
-- release note: success or fails in the forum support topic, thanks!
+- release note: successes or fails in the forum support topic, thanks!
 - release note: you can also use the Docker container to preclear disks on non-Unraid systems
 - release note: https://github.com/desertwitch/nwipe-pc/pkgs/container/nwipe-pc
 ###2025.10.23
