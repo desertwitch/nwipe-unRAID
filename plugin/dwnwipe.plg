@@ -15,6 +15,12 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) with Preclear
+###2026.05.17
+- new: updated from nwipe-0.39 to nwipe-0.41
+- changes: https://github.com/martijnvanbrummelen/nwipe/releases/tag/v0.41
+- release note: for new disks, check out the new "scattered" I/O mode
+- release note: ensures mechanical exercise, random seeks and long jumps
+- release note: to find and use it, press "d" when on disk selection screen
 ###2025.11.14
 - new: added a custom "Unraid Preclear" method to nwipe-0.39 (now forked)
 - release note: while this was extensively tested, please report back
@@ -53,9 +59,9 @@ exit 0
 </FILE>
 
 <!-- plugin package -->
-<FILE Name="&plgPATH;/nwipe-0.39-x86_64-2_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/nwipe-0.39-x86_64-2_unraid.txz</URL>
-<MD5>be12006432e8341b287242e5480477e1</MD5>
+<FILE Name="&plgPATH;/nwipe-0.41-x86_64-1_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.41-x86_64-1_unraid.txz</URL>
+<MD5>c286a1dc768474bba2517c9ab0bd3429</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
