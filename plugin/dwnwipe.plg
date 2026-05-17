@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "dwnwipe">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2025.11.14">
+<!ENTITY version   "2026.05.17">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
@@ -20,7 +20,7 @@
 - changes: https://github.com/martijnvanbrummelen/nwipe/releases/tag/v0.41
 - release note: for new disks, check out the new "scattered" I/O mode
 - release note: ensures mechanical exercise, random seeks and long jumps
-- release note: to find and use it, press "d" when on disk selection screen
+- release note: to find and use it, press key "d" when on disk selection screen
 ###2025.11.14
 - new: added a custom "Unraid Preclear" method to nwipe-0.39 (now forked)
 - release note: while this was extensively tested, please report back
