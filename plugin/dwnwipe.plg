@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "dwnwipe">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2026.05.17">
+<!ENTITY version   "2026.08.18">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
@@ -15,6 +15,8 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) with Preclear
+###2026.08.18
+- fix: do not remove libparted on uninstall (now part of OS)
 ###2026.05.17
 - new: updated from nwipe-0.39 to nwipe-0.41
 - changes: https://github.com/martijnvanbrummelen/nwipe/releases/tag/v0.41
@@ -43,7 +45,7 @@ exit 0
 </FILE>
 
 <!-- dependency packages -->
-<FILE Name="&plgPATH;/parted-3.6-x86_64-1_slack15.1.txz" Min="6.13" Run="upgradepkg --install-new">
+<FILE Name="&plgPATH;/parted-3.6-x86_64-1_slack15.1.txz" Min="6.13" Max="7.0.99" Run="upgradepkg --install-new">
 <URL>&pkgURL;/parted-3.6-x86_64-1_slack15.1.txz</URL>
 <MD5>a0d226c87c2bbfda2100030f30bd38ef</MD5>
 </FILE>
@@ -93,11 +95,8 @@ echo ""
 <INLINE>
 killall nwipe-bin >/dev/null 2>&amp;1
 
-# check if parted is used by another plugin
-if [ "$(find /boot/config/plugins/*.plg -type f ! -iname "*dwnwipe.plg*" | xargs grep "parted-" -sl)" ]; then
-    echo "parted in use by another plugin, will not be removed with nwipe."
-    rm -f &plgPATH;/parted*.txz
-fi
+# part of the OS in some Unraid versions
+rm -f &plgPATH;/parted*.txz
 
 # check if libconfig is used by another plugin
 if [ "$(find /boot/config/plugins/*.plg -type f ! -iname "*dwnwipe.plg*" | xargs grep "libconfig-" -sl)" ]; then
