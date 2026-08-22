@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "dwnwipe">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2026.08.18">
+<!ENTITY version   "2026.08.22">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
@@ -16,7 +16,7 @@
 <CHANGES>
 ## nwipe (Secure Disk Eraser) with Preclear
 ###2026.08.22
-- new: ATA/NVMe Secure Erase (hardware-native sanitize)
+- new: ATA/NVMe Secure Erase (Hardware-native Sanitize)
 - new: updated from nwipe-0.41 to nwipe-0.42
 - changes: https://github.com/martijnvanbrummelen/nwipe/releases/tag/v0.42
 ###2026.08.18
