@@ -15,6 +15,10 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) with Preclear
+###2026.08.22
+- new: ATA/NVMe Secure Erase (hardware-native sanitize)
+- new: updated from nwipe-0.41 to nwipe-0.42
+- changes: https://github.com/martijnvanbrummelen/nwipe/releases/tag/v0.42
 ###2026.08.18
 - fix: do not remove libparted on uninstall (now part of OS)
 ###2026.05.17
@@ -55,15 +59,10 @@ exit 0
 <MD5>6df9026349b56b4e4beea086bc2afeb0</MD5>
 </FILE>
 
-<FILE Name="&plgPATH;/libconfig-1.7.2-x86_64-1alien.tgz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/libconfig-1.7.2-x86_64-1alien.tgz</URL>
-<MD5>5a782e7e41566ccf4507417a6384ef1f</MD5>
-</FILE>
-
 <!-- plugin package -->
-<FILE Name="&plgPATH;/nwipe-0.41-x86_64-1_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/nwipe-0.41-x86_64-1_unraid.txz</URL>
-<MD5>c286a1dc768474bba2517c9ab0bd3429</MD5>
+<FILE Name="&plgPATH;/nwipe-0.42-x86_64-1_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.42-x86_64-1_unraid.txz</URL>
+<MD5>2c641b1cbc7752578cc770bcb5117112</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
@@ -97,12 +96,6 @@ killall nwipe-bin >/dev/null 2>&amp;1
 
 # part of the OS in some Unraid versions
 rm -f &plgPATH;/parted*.txz
-
-# check if libconfig is used by another plugin
-if [ "$(find /boot/config/plugins/*.plg -type f ! -iname "*dwnwipe.plg*" | xargs grep "libconfig-" -sl)" ]; then
-    echo "libconfig in use by another plugin, will not be removed with nwipe."
-    rm -f &plgPATH;/libconfig*.tgz
-fi
 
 removepkg &plgPATH;/*.txz
 removepkg &plgPATH;/*.tgz
