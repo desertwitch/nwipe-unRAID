@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "dwnwipe">
 <!ENTITY author    "desertwitch">
-<!ENTITY version   "2026.08.22">
+<!ENTITY version   "2026.09.20">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/nwipe-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/packages">
@@ -15,6 +15,9 @@
 
 <CHANGES>
 ## nwipe (Secure Disk Eraser) with Preclear
+###2026.09.20
+- new: updated from nwipe-0.42 to nwipe-0.42.1
+- changes: bugfixes outside upstream Nwipe release cycle
 ###2026.08.22
 - new: ATA/NVMe Secure Erase (Hardware-native Sanitize)
 - new: updated from nwipe-0.41 to nwipe-0.42
@@ -60,9 +63,9 @@ exit 0
 </FILE>
 
 <!-- plugin package -->
-<FILE Name="&plgPATH;/nwipe-0.42-x86_64-1_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
-<URL>&pkgURL;/nwipe-0.42-x86_64-1_unraid.txz</URL>
-<MD5>2c641b1cbc7752578cc770bcb5117112</MD5>
+<FILE Name="&plgPATH;/nwipe-0.42.1-x86_64-1_unraid.txz" Min="6.10" Run="upgradepkg --install-new">
+<URL>&pkgURL;/nwipe-0.42.1-x86_64-1_unraid.txz</URL>
+<MD5>8c39c2741833e2b9db26e2c74e9d63b3</MD5>
 </FILE>
 
 <FILE Name="&emhttp;/README.md" Mode="0644">
